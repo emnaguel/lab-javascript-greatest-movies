@@ -1,37 +1,3 @@
-// let movies = [
-//   {
-//     "title": "The Shawshank Redemption",
-//     "year": 1994,
-//     "director": "Frank Darabont",
-//     "duration": "2h 22min",
-//     "genre": [
-//       "Crime",
-//       "Drama"
-//     ],
-//     "rate": 9.3
-//   },
-//   {
-//     "title": "The Godfather",
-//     "year": 1974,
-//     "director": "Francis Ford Coppola",
-//     "duration": "2h 55min",
-//     "genre": [
-//       "Crime",
-//       "Drama"
-//     ],
-//     "rate": 9.2
-//   },
-//   {
-//     "title": "The Godfather: Part II",
-//     "year": 1974,
-//     "director": "Francis Ford Coppola",
-//     "duration": "3h 22min",
-//     "genre": [
-//       "Crime",
-//       "Drama"
-//     ],
-//     "rate": 9
-//   },]
 
 // Iteration 1: All directors? - Get the array of all directors.
 function getAllDirectors(movies) {
@@ -161,40 +127,3 @@ function turnHoursToMinutes(movies) {
   return newArray
 }
 
-// // BONUS - Iteration 8: Best yearly rate average - Best yearly rate average
-// function bestYearAvg(movies) {
-//   if(movies.length===0){
-//     return null
-//   } else {
-//     let years= []
-//       movies.forEach((movie)=> {
-//       years.push(movie.year)
-
-//     })
-   
-//     let uniqYearsSorted = uniquifyArray(years).sort((a, b) => a - b)
-//     console.log(uniqYearsSorted)
-
-//      let newHash = {}
-
-//     //uniqYearsSorted.forEach((year) => {
-//       // movies.forEach((movie) => {
-//       //   if(movie.year === year) {
-          
-//       //     console.log(movie.rate)
-//       //     newHash[year] =
-         
-//       //   }
-//   //     // })
-//   //     let rate= new Array();
-//   //     for(i = 0; i < movies.length; i++) {
-//   //       if(movies[i].year === year) {
-//   //         newHash[year]= rate.push(movies[i].rate);
-//   //       }
-//   //     }
-
-//   //   })
-//   //   console.log(newHash)
-//   // }
-
-// }
