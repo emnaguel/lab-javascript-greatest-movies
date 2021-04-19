@@ -65,13 +65,15 @@ function dramaMoviesRate(movies){
 
 
 // Iteration 5: Ordering by year - Order by year, ascending (in growing order)
-function orderByYear(movies) {
-  if(movies.length === 0) return 0
-  let newMovies = movies
-  newMovies = newMovies.sort((a, b) => a.title.localeCompare(b.title))
-  newMovies = newMovies.sort((a, b) => a.year - b.year)
-  return newMovies
-  
+function orderByYear(movieArray) {
+  const arrayCopy = [...movieArray];
+  const newArray = arrayCopy.sort(function (a, b) {
+    if (a.year < b.year) return -1; // ordering ascending by year
+    if (a.year > b.year) return 1; // ordering ascending by year
+    if (a.title > b.title) return 1; // then ordering alphabetically by title (all that remains are same year movies)
+    if (a.title < b.title) return -1; //
+  });
+  return newArray;
 }
 
 
@@ -79,7 +81,7 @@ function orderByYear(movies) {
 function orderAlphabetically(movies) {
 
     let moviesTitle = []
-    let newMovies = movies
+    let newMovies = [...movies]
     if(newMovies.length > 20) {
 
          let filterMovies = newMovies.sort((a, b) => a.title.localeCompare(b.title)).filter((movie,idx) => idx < 20)
